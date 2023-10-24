@@ -41,7 +41,7 @@ You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload 
 ├── LICENSE
 ├── assets                       --> media assets (please indicate the source if you want to reprint)
 ├── template_data                --> data for examples
-├── analysis.py                  --> code style analysis code
+├── analysis.py                  --> code for usage statistics
 ├── app.py                       --> code for Gradio App
 ├── code2pil.py                  --> code for image generation
 ├── examples.py                  --> code examples

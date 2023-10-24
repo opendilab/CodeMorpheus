@@ -42,7 +42,7 @@ You can [access it online](http://opendilab.net:8006/), click ‘Upload code via
 ├── LICENSE
 ├── assets                       --> 相关图片素材（转载请注明来源）
 ├── template_data                --> 样例数据
-├── analysis.py                  --> 代码风格分析代码
+├── analysis.py                  --> 使用量统计代码
 ├── app.py                       --> Gradio App 代码
 ├── code2pil.py                  --> 图片生成代码
 ├── examples.py                  --> 代码样例
