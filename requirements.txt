@@ -6,3 +6,5 @@ pillow
 tqdm
 requests
 click>=8.0.0
+transformers
+bitsandbytes
