@@ -1,6 +1,6 @@
 # CodeMorpheus
 <div align="center">
-    <img width="1000px" height="auto" src="https://github.com/opendilab/CodeMorpheus/blob/main/assert/template_imgs.png"></a>
+    <img width="1000px" height="auto" src="https://github.com/opendilab/CodeMorpheus/blob/main/assert/template_imgs.jpeg"></a>
 </div>
 
 
