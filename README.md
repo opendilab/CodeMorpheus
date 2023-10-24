@@ -11,13 +11,13 @@
 
 ### Input Code Lines
 
-You can [acess it online](http://opendilab.net:8006/), enter the code snippet you wish to generate into the input box, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
-
+You can [access it online](http://opendilab.net:8006/), enter the code snippet you wish to generate into the input box, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
+<img src=https://github.com/opendilab/CodeMorpheus/blob/release/assets/input_code.gif width=35% />
 
 ### Upload Code File
 
-You can [acess it online](http://opendilab.net:8006/), click ‘Upload code via file’, and select the code you want to generate, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
-
+You can [access it online](http://opendilab.net:8006/), click ‘Upload code via file’, and select the code you want to generate, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
+<img src=https://github.com/opendilab/CodeMorpheus/blob/release/assets/upload_file.gif width=35% />
 ## :writing_hand: Feature
 
 | Task | Status |
@@ -30,6 +30,9 @@ You can [acess it online](http://opendilab.net:8006/), click ‘Upload code via 
 - Contact our email (opendilab@pjlab.org.cn)
 
 - We appreciate all the feedback and contributions to improve CodeMorpheus, both algorithms and system designs. 
+
+- Discuss on DI-engine's WeChat group (i.e. add us on WeChat: ding314assist)
+<img src=https://github.com/opendilab/CodeMorpheus/blob/release/assets/wechat.jpeg width=35% />
 
 
 ## License
