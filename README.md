@@ -7,6 +7,7 @@ English | [简体中文](https://github.com/opendilab/CodeMorpheus/blob/release/
 
 :rocket: :rocket: "Have you ever contemplated that code can do more than just execute logic, but can also be transformed into visual art? This is not just an event; it's an artistic experiment. Dear coding enthusiasts, in celebration of this special day that belongs to us, OpenDILab has prepared a spectacular event for all the 'code monkeys' out there. Let your code 'paint' the world in your heart."
 
+P.S. remember to give us a star ![stars - codemorpheus](https://img.shields.io/github/stars/opendilab/codemorpheus?style=social)
 
 ## :star_struck: Quick Start
 
