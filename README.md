@@ -26,10 +26,28 @@ You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload 
 
 ## :writing_hand: Feature
 
-| Task | Status |
-|:------: | :------: |
-| Release Inference Code | Work In Progress |
-| Support Other Languages | Work In Progress |
+- [x] Release inference service
+- [x] Dataset examples
+- [ ] Release inference model
+- [ ] Access to more open source text-to-image models
+- [ ] Release code-prompt-self-portrait dataset
+- [ ] Release RL fine-tuning code
+- [ ] Support more programming languages
+
+
+# Project Structure
+```text
+.
+├── LICENSE
+├── assets                       --> media assets (please indicate the source if you want to reprint)
+├── template_data                --> data for examples
+├── analysis.py                  --> code for usage statistics
+├── app.py                       --> code for Gradio App
+├── code2pil.py                  --> code for image generation
+├── examples.py                  --> code examples
+└── language_model.py            --> code for language model
+
+```
 
 ## :speech_balloon: Feedback and Contribution
 - [File an issue](https://github.com/opendilab/CodeMorpheus/issues/new/choose) on Github

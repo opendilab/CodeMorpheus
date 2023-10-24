@@ -27,10 +27,28 @@ You can [access it online](http://opendilab.net:8006/), click ‘Upload code via
 
 ## :writing_hand: 更新计划
 
-| 任务 | 状态 |
-|:------: | :------: |
-| Release Inference Code | Work In Progress |
-| Support Other Languages | Work In Progress |
+- [x] 开源推理服务接口
+- [x] 数据集样例
+- [ ] 开源完整推理模型代码
+- [ ] 接入更多开源文生图模型
+- [ ] 开放完整代码-提示词-自画像数据集
+- [ ] 开源RL微调代码
+- [ ] 支持更多编程语言
+
+
+# 项目结构
+```text
+.
+├── LICENSE
+├── assets                       --> 相关图片素材（转载请注明来源）
+├── template_data                --> 样例数据
+├── analysis.py                  --> 使用量统计代码
+├── app.py                       --> Gradio App 代码
+├── code2pil.py                  --> 图片生成代码
+├── examples.py                  --> 代码样例
+└── language_model.py            --> 语言模型代码
+
+```
 
 ## :speech_balloon: 反馈意见和贡献
 - 有任何疑问或意见都可以在 github 上直接 [提出 issue](https://github.com/opendilab/LightZero/issues/new/choose)
