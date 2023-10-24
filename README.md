@@ -26,8 +26,8 @@ You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload 
 
 ## :writing_hand: Feature
 
-- [✓] Release source code of inference service
-- [✓] Dataset examples
+- [x] Release source code of inference service
+- [x] Dataset examples
 - [ ] Release source code of inference model
 - [ ] Access to more open source text-to-image models
 - [ ] Release source code of code-prompt-self-portrait dataset
