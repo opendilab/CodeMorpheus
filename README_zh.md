@@ -13,14 +13,14 @@ P.S. 路过记得点个 star ![stars - codemorpheus](https://img.shields.io/gith
 
 ### 直接输入代码
 
-You can [access it online](http://codemorpheus.opendilab.net/), enter the code snippet you wish to generate into the input box, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
+访问[活动页面](http://codemorpheus.opendilab.net/)，将想要生成的代码段输入到对话框内 点击“提交生成”，等待20-35秒后，即可获得代码专属形象。
 <div align="center">
     <img width="320px" height="240px" src="https://github.com/opendilab/CodeMorpheus/blob/release/assets/input_code_zh.jpg"></a>
 </div>
 
 ### 上传代码文件
 
-You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload code via file’, and select the code you want to generate, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
+访问[活动页面](http://codemorpheus.opendilab.net/)，点击“通过文件上传代码”，选择想要生成的代码文件后，点击“提交生成”，等20-35秒后，即可获得代码专属形象。
 <div align="center">
     <img width="320px" height="240px" src="https://github.com/opendilab/CodeMorpheus/blob/release/assets/upload_file_zh.jpg"></a>
 </div>
@@ -61,6 +61,6 @@ You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload 
 
 
 ## License
-All code within this repository is under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+本仓库中的所有代码都符合 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
