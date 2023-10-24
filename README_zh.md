@@ -27,8 +27,8 @@ You can [access it online](http://opendilab.net:8006/), click ‘Upload code via
 
 ## :writing_hand: 更新计划
 
-- [ ] 开源推理服务接口
-- [ ] 数据集样例
+- [✅] 开源推理服务接口
+- [✅] 数据集样例
 - [ ] 开源完整推理模型代码
 - [ ] 接入更多开源文生图模型
 - [ ] 开放完整代码-提示词-自画像数据集

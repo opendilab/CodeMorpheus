@@ -26,12 +26,12 @@ You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload 
 
 ## :writing_hand: Feature
 
-- [ ] Open source inference service interface
-- [ ] Dataset examples
-- [ ] Open source complete inference model code
+- [✅] Release source code of inference service
+- [✅] Dataset examples
+- [ ] Release source code of inference model
 - [ ] Access to more open source text-to-image models
-- [ ] Open source complete code-prompt-self-portrait dataset
-- [ ] Open source RL fine-tuning code
+- [ ] Release source code of code-prompt-self-portrait dataset
+- [ ] Release source code of RL fine-tuning code
 - [ ] Support more programming languages
 
 
