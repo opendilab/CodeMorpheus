@@ -11,16 +11,16 @@
 
 ### Input Code Lines
 
-You can [access it online](http://opendilab.net:8006/), enter the code snippet you wish to generate into the input box, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
+You can [access it online](http://codemorpheus.opendilab.net/), enter the code snippet you wish to generate into the input box, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
 <div align="center">
-    <img width="320px" height="240px" src="https://github.com/opendilab/CodeMorpheus/blob/release/assets/input_code.gif"></a>
+    <img width="50%" height="50%" src="https://github.com/opendilab/CodeMorpheus/blob/release/assets/input_code.mp4"></a>
 </div>
 
 ### Upload Code File
 
-You can [access it online](http://opendilab.net:8006/), click ‘Upload code via file’, and select the code you want to generate, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
+You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload code via file’, and select the code you want to generate, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
 <div align="center">
-    <img width="320px" height="240px" src="https://github.com/opendilab/CodeMorpheus/blob/release/assets/upload_file.gif"></a>
+    <img width="50%" height="50%" src="https://github.com/opendilab/CodeMorpheus/blob/release/assets/upload_file.mp4"></a>
 </div>
 
 ## :writing_hand: Feature
