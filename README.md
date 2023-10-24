@@ -11,12 +11,12 @@
 
 ### Input Code Lines
 
-You can [acess it online](https://opendilab.net:8006), enter the code snippet you wish to generate into the input box, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
+You can [acess it online](http://opendilab.net:8006/), enter the code snippet you wish to generate into the input box, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
 
 
 ### Upload Code File
 
-You can [acess it online](https://opendilab.net:8006), click ‘Upload code via file’, and select the code you want to generate, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
+You can [acess it online](http://opendilab.net:8006/), click ‘Upload code via file’, and select the code you want to generate, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
 
 ## :writing_hand: Feature
 
