@@ -14,14 +14,14 @@ English | [简体中文](https://github.com/opendilab/CodeMorpheus/blob/release/
 
 You can [access it online](http://codemorpheus.opendilab.net/), enter the code snippet you wish to generate into the input box, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
 <div align="center">
-    <img width="50%" height="50%" src="https://github.com/opendilab/CodeMorpheus/blob/release/assets/input_code.mp4"></a>
+    <img width="50%" height="50%" src="https://github.com/opendilab/CodeMorpheus/blob/release/assets/input_code_en.jpg"></a>
 </div>
 
 ### Upload Code File
 
 You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload code via file’, and select the code you want to generate, click 'submit and generate', and after waiting for a few seconds, you can obtain a portrait of that code segment.
 <div align="center">
-    <img width="50%" height="50%" src="https://github.com/opendilab/CodeMorpheus/blob/release/assets/upload_file.mp4"></a>
+    <img width="50%" height="50%" src="https://github.com/opendilab/CodeMorpheus/blob/release/assets/upload_file_en.jpg"></a>
 </div>
 
 ## :writing_hand: Feature
