@@ -1,4 +1,5 @@
 # CodeMorpheus
+English | [简体中文](https://github.com/opendilab/CodeMorpheus/blob/release/README_zh.md)
 <div align="center">
     <img width="1000px" height="auto" src="https://github.com/opendilab/CodeMorpheus/blob/release/assets/template_imgs.jpeg"></a>
 </div>
