@@ -1,0 +1,8 @@
+hbutils>=0.9.1
+pathlib
+argparse
+gradio==3.49.0
+pillow
+tqdm
+requests
+click>=8.0.0
