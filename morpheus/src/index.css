@@ -1,13 +1,255 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+.container {
+}
+
+.column {
+  height: 100vh;
+}
+
+.column:nth-child(1) {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.column:nth-child(2) {
+  padding: 3rem;
+}
+
+.poster-container {
+  border: 30px solid rgb(199, 93, 77);
+  position: relative;
+}
+
+.poster-details {
+  padding: 5rem;
+  margin: auto;
+  text-align: center;
+}
+
+.poster-details__title {
+  margin-bottom: 0.85rem;
+  margin-top: 0;
+}
+
+.poster-details__label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.poster-title {
+  color: rgb(199, 93, 77);
+  font-size: 3rem;
+  margin: 1rem 0 0 0;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
+
+.poster-subtitle {
+  color: rgb(199, 93, 77);
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 0 0.5rem 0.25rem;
+}
+
+.poster-footer {
+  color: rgb(199, 93, 77);
+  font-size: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.poster-title,
+.poster-subtitle {
+  word-break: break-all;
+}
+
+.poster-byline {
+  text-transform: uppercase;
+}
+
+input {
+  border: 0;
+  border-bottom: 4px solid #2a2a2a;
+  background: transparent;
+  height: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 0;
+}
+
+button {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  color: rgb(199, 93, 77);
+  padding: 1rem 2rem;
+  width: 90%;
+  font-size: 0.5rem;
+}
+
+.print-icon {
+  bottom: 2rem;
+  height: auto;
+  max-width: 50px;
+  position: absolute;
+  right: 2rem;
+  opacity: 0.25;
+}
+
+.rectangle {
+  width: 55%;
+  height: 30px;
+  background-color: rgb(199, 91, 71);
+  box-shadow: 3px 2px 4px rgba(119, 71, 60);
+  display: flex;
+  align-items: center;
+}
+.rectangle-text {
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  margin-left: 0.5rem;
+}
+
+.blank-area-small {
+  width: 200px;
+  height: 15px;
+  margin: 10px;
+  background-color: rgb(245, 245, 245);
+}
+.blank-area {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  background-color: rgb(245, 245, 245);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-container5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.icon-item-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-left: 15px;
+  margin-right: 5px;
+  margin-top: 15px;
+}
+.icon-item-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-left: 5px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.icon-item-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 15px
+}
+.item {
+  margin: 4px; /* 元素之间的间距 */
+  padding: 0px; /* 元素内部的空白区域 */
+  color: rgb(199, 93, 77);
+}
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  background-color: #f6f8fa;
+  transition: background-color 0.2s ease;
+}
+
+@keyframes blinking-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blinking-button {
+  animation: blinking-animation 2s infinite;
+}
+
+.wave-button {
+  position: relative;
+  border: none;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.wave-button.wave:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
+  animation: waveAnimation 1s linear;
+}
+
+@keyframes waveAnimation {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
 }
