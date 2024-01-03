@@ -1,8 +1,10 @@
-import React, { Component, useEffect, useRef, createRef } from 'react';
+import { Component, useEffect, useRef, createRef } from 'react';
 import { PieChart, Pie, Cell } from "recharts";
 import * as echarts from 'echarts';
+import * as React from 'react'
 import 'echarts-wordcloud';
 import { TrophyIcon, MarkGithubIcon, GitPullRequestIcon, GitCommitIcon, StarIcon, ClockIcon } from '@primer/octicons-react'
+import {QRCodeSVG} from 'qrcode.react';
 import { renderActiveShape, COLORS } from './pie'
 
 const data = [
@@ -18,8 +20,6 @@ const words = {'RL': 5, 'deep-learning': 3, 'imitation-learning': 3, 'reinforcem
         //<div style={{margin: "15px", justifyContent: "center", display: 'flex'}}>
         // <img src={imgUrl} alt="sd image" style={{ width: '90%' }} />
         //</div>
-
-
 function WordCloudComponent() {
   const chartRef = useRef(null);
 
@@ -78,7 +78,7 @@ function IconComponent(props) {
     <div className={cssName}>
       <button className="github-button">
         <Icon size={20} fill={"rgb(199, 93, 77"}/> 
-        <text color="rgb(250, 50, 50" style={{marginLeft: "10px"}}>{props.text}</text>
+        <text color="rgb(250, 50, 50)" style={{marginLeft: "10px"}}>{props.text}</text>
       </button>
     </div>
   )
@@ -100,19 +100,30 @@ class Poster extends Component {
           {/* <small className="poster-byline">A posterly original poster</small> */}
           {hasTitle ? <h2 className="poster-title">{this.props.title}</h2> : ''}
           {hasSubTitle ? (
-            <h3 className="poster-subtitle">{this.props.subtitle}</h3>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <h3 className="poster-subtitle">{this.props.subtitle}</h3>
+                <button className="github-button-sp">
+                <a
+                    target="_blank"
+                    href="https://github.com/opendilab/CodeMorpheus"
+                    rel="noopener noreferrer"
+                >
+                    <MarkGithubIcon size={16} fill={"rgb(199, 93, 77"}/> 
+                </a>
+                </button>
+            </div>
           ) : (
             ''
           )}
         </header>
-          <div className="blank-area-small"></div>
+          <div className="blank-area-tiny"></div>
         <div className="rectangle">
           <text className="rectangle-text"> GitHub 总结概述 </text>
         </div>
         <div className="grid-container">
-          <IconComponent text="总操作数：999" cssType="left" icon={MarkGithubIcon}/>
-          <IconComponent text="PR/Issue: 666" cssType="right" icon={GitPullRequestIcon}/>
-          <IconComponent text="最晚工作时间：04:59" cssType="left" icon={ClockIcon}/>
+          <IconComponent text="总操作数：9999" cssType="left" icon={MarkGithubIcon}/>
+          <IconComponent text="PR/ISSUE: 666" cssType="right" icon={GitPullRequestIcon}/>
+          <IconComponent text="最晚瞬间：04:59" cssType="left" icon={ClockIcon}/>
           <IconComponent text="Commit: 2023" cssType="right" icon={GitCommitIcon}/>
         </div>
           <IconComponent text="最关注：OpenDILab/DI-engine" cssType="middle" icon={StarIcon}/>
@@ -144,14 +155,22 @@ class Poster extends Component {
 			  <WordCloudComponent />
 			</div>
         </div>
-        <div className="icon-item-middle"> 
+        <div className="icon-item-middle2"> 
           <button className="github-button">
-            磅礴浩渺的攀登者
+            称号：磅礴浩渺的攀登者
           </button>
         </div>
+          <div className="blank-area-tiny"></div>
         <footer className="poster-footer">
-          <h3 style={{color: 'rgb(121, 77, 65)'}}>{this.props.footer}</h3>
-          <h5>{"OpenDILab 出品，版权所有 © 2023"}</h5>
+          <h3 style={{color: 'rgb(121, 77, 65)', marginBottom: "0px"}}>{this.props.footer}</h3>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end" }}>
+            <div> 
+              <h5>{"OpenDILab 出品，版权所有 © 2023"}</h5>
+            </div>
+            <div style={{ position: "absolute", bottom: 0, right: 0, margin: "8px" }}>
+              <QRCodeSVG value="https://github.com/opendilab/CodeMorpheus" size={36} fgColor={"#AE2012"}/>
+            </div>
+          </div>
         </footer>
       </div>
     );
