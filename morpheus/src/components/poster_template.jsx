@@ -7,25 +7,33 @@ import { TrophyIcon, MarkGithubIcon, GitPullRequestIcon, GitCommitIcon, StarIcon
 import {QRCodeSVG} from 'qrcode.react';
 import { renderActiveShape, COLORS } from 'components/pie'
 
-const data = [
-  { name: "Python", value: 33.27 },
-  { name: "Python1", value: 13.27 },
-  { name: "Python2", value: 10.00 },
-  { name: "C++", value: 29.17 },
-  { name: "Cython", value: 12.11 },
-  { name: "Others", value: 5.45 },
-];
-const imgUrl = "https://psydi.oss-cn-shanghai.aliyuncs.com/codemorpheus%2Fdemo_diffusion.png?x-oss-process&OSSAccessKeyId=LTAI5tJqfodvyN7cj7pHuYYn&Expires=1711646125&Signature=PiLESGJ7ZfP3gsB9pYxDoUflj0k%3D";
-const words = {'RL': 5, 'deep-learning': 3, 'imitation-learning': 3, 'reinforcement-learning-algorithms': 3, 'nextjs': 3, 'react': 3, 'vercel': 3, 'chatgpt': 2, 'llm': 2, 'inverse-reinforcement-learning': 2, 'model-based-reinforcement-learning': 2, 'offline-rl': 2, 'pytorch-rl': 2, 'deep-reinforcement-learning': 2, 'large-language-models': 2, 'atari': 2, 'pytorch': 2, 'self-play': 2, 'compiler': 2, 'agent': 1}
+const fakeData = { 
+    totalOperation: 9999,
+    commitOperation: 2023,
+    PRIssueOperation: 666,
+    latestMoment: "03:14",
+    favoriteRepo: "OpenDILab/DI-engine",
+    label: "磅礴浩渺的攀登者",
+    languageRanking: [
+        { name: "Python", value: 33.27 },
+        { name: "C++", value: 29.17 },
+        { name: "Java", value: 13.27 },
+        { name: "Cython", value: 12.11 },
+        { name: "HTML", value: 10.00 },
+        { name: "Others", value: 5.45 },
+    ],
+    imgUrl: "https://psydi.oss-cn-shanghai.aliyuncs.com/codemorpheus%2Fdemo_diffusion.png?x-oss-process&OSSAccessKeyId=LTAI5tJqfodvyN7cj7pHuYYn&Expires=1711646125&Signature=PiLESGJ7ZfP3gsB9pYxDoUflj0k%3D",
+    repoTopic: {'RL': 5, 'deep-learning': 3, 'imitation-learning': 3, 'reinforcement-learning-algorithms': 3, 'nextjs': 3, 'react': 3, 'vercel': 3, 'chatgpt': 2, 'llm': 2, 'inverse-reinforcement-learning': 2, 'model-based-reinforcement-learning': 2, 'offline-rl': 2, 'pytorch-rl': 2, 'deep-reinforcement-learning': 2, 'large-language-models': 2, 'atari': 2, 'pytorch': 2, 'self-play': 2, 'compiler': 2, 'agent': 1},
+};
         //<div style={{margin: "15px", justifyContent: "center", display: 'flex'}}>
         // <img src={imgUrl} alt="sd image" style={{ width: '90%' }} />
         //</div>
-function WordCloudComponent() {
+function WordCloudComponent(props) {
   const chartRef = useRef(null);
 
   useEffect(() => {
       // transfrom word to echarts format
-    const wordFrequency = Object.entries(words).map(([name, value]) => ({ name, value }));
+    const wordFrequency = Object.entries(props.words).map(([name, value]) => ({ name, value }));
 
     const chart = echarts.init(chartRef.current);
 
@@ -89,6 +97,7 @@ class Poster extends Component {
   render() {
     const hasTitle = this.props.title;
     const hasSubTitle = this.props.subtitle;
+    const data = this.props?.data || fakeData;
 
     return (
       <div className="column poster-container">
@@ -114,25 +123,25 @@ class Poster extends Component {
         </header>
           <div className="blank-area-tiny"></div>
         <div className="rectangle">
-          <text className="rectangle-text"> GitHub 总结概述 </text>
+          <text className="rectangle-text"> 言之有物 </text>
         </div>
         <div className="grid-container">
-          <IconComponent text="总操作数：9999" cssType="left" icon={MarkGithubIcon}/>
-          <IconComponent text="PR/ISSUE: 666" cssType="right" icon={GitPullRequestIcon}/>
-          <IconComponent text="最晚瞬间：04:59" cssType="left" icon={ClockIcon}/>
-          <IconComponent text="Commit: 2023" cssType="right" icon={GitCommitIcon}/>
+          <IconComponent text={`总操作数：${data.totalOperation}`} cssType="left" icon={MarkGithubIcon}/>
+          <IconComponent text={`PR/ISSUE: ${data.PRIssueOperation}`} cssType="right" icon={GitPullRequestIcon}/>
+          <IconComponent text={`最晚瞬间：${data.latestMoment}`} cssType="left" icon={ClockIcon}/>
+          <IconComponent text={`Commit: ${data.commitOperation}`} cssType="right" icon={GitCommitIcon}/>
         </div>
-          <IconComponent text="最关注：OpenDILab/DI-engine" cssType="middle" icon={StarIcon}/>
+          <IconComponent text={`最关注：${data.favoriteRepo}`} cssType="middle" icon={StarIcon}/>
         <div className="rectangle">
-          <text className="rectangle-text"> GitHub 可视化 </text>
+          <text className="rectangle-text"> 小孔成像 </text>
         </div>
         <div className="grid-container">
 			<div style={{margin: "5px", marginLeft: "10px", marginRight: "0px", width: '100%'}}>
 				<PieChart width={150} height={140}>
 				<Pie
-					activeIndex={data.map((_, index) => index)}
+					activeIndex={data.languageRanking.map((_, index) => index)}
 					activeShape={renderActiveShape}
-					data={data}
+					data={data.languageRanking}
 					cx={60}
 					cy={60}
 					innerRadius={16}
@@ -141,26 +150,26 @@ class Poster extends Component {
 					dataKey="value"
 					paddingAngle={3}
 				>
-					{data.map((entry, index) => (
-					<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+					{data.languageRanking.map((entry, index) => (
+					  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
 					))}
 				</Pie>
 				</PieChart>
 			</div>
 			<div style={{margin: "5px", width: '100%'}}>
-			  <WordCloudComponent />
+			  <WordCloudComponent words={data.repoTopic}/>
 			</div>
         </div>
         <div className="icon-item-middle2"> 
           <button className="github-button" style={{fontSize: "16px"}}>
-            磅礴浩渺的攀登者
+            {data.label}
           </button>
         </div>
         <footer className="poster-footer">
           <h4 style={{color: 'rgb(121, 77, 65)', marginBottom: "0px"}}>Anything one man can imagine,</h4>
           <h4 style={{color: 'rgb(121, 77, 65)', marginBottom: "0px", marginTop: "0px"}}>other men can make real.</h4>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end" }}>
-            <div> 
+            <div style={{ position: "absolute", bottom: 0, margin: "0px" }}>
               <h5>{"OpenDILab 出品，版权所有 © 2023"}</h5>
             </div>
             <div style={{ position: "absolute", bottom: 0, right: 0, margin: "4px" }}>
