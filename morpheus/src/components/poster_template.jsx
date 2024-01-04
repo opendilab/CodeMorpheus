@@ -5,7 +5,7 @@ import * as React from 'react'
 import 'echarts-wordcloud';
 import { TrophyIcon, MarkGithubIcon, GitPullRequestIcon, GitCommitIcon, StarIcon, ClockIcon } from '@primer/octicons-react'
 import {QRCodeSVG} from 'qrcode.react';
-import { renderActiveShape, COLORS } from './pie'
+import { renderActiveShape, COLORS } from 'components/pie'
 
 const data = [
   { name: "Python", value: 33.27 },
