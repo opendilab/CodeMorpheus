@@ -123,7 +123,7 @@ button {
 }
 
 .rectangle {
-  width: 55%;
+  width: 45%;
   height: 30px;
   background-color: rgb(199, 91, 71);
   box-shadow: 3px 2px 4px rgba(119, 71, 60);
@@ -144,7 +144,7 @@ button {
 }
 .blank-area-tiny {
   width: 200px;
-  height: 10px;
+  height: 15px;
   background-color: rgb(245, 245, 245);
 }
 .blank-area {
@@ -172,7 +172,7 @@ button {
   flex-direction: row;
   margin-left: 10px;
   margin-right: 2px;
-  margin-top: 13px;
+  margin-top: 15px;
 }
 .icon-item-right {
   display: flex;
@@ -181,16 +181,16 @@ button {
   flex-direction: row;
   margin-left: 2px;
   margin-right: 10px;
-  margin-top: 13px;
+  margin-top: 15px;
 }
 .icon-item-middle {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  margin: 4px;
-  margin-top: 13px;
-  margin-bottom: 13px;
+  margin: 2px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .icon-item-middle2 {
   display: flex;

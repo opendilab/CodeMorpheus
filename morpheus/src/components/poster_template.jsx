@@ -1,4 +1,4 @@
-import { Component, useEffect, useRef, createRef } from 'react';
+import { Component, useEffect, useRef } from 'react';
 import { PieChart, Pie, Cell } from "recharts";
 import * as echarts from 'echarts';
 import * as React from 'react'
@@ -10,11 +10,11 @@ import { renderActiveShape, COLORS } from 'components/pie'
 const fakeData = { 
     totalOperation: 9999,
     commitOperation: 2023,
-    PRIssueOperation: 666,
+    PRIssueOperation: 66,
     latestMoment: "03:14",
     favoriteRepo: "OpenDILab/DI-engine",
     label: "磅礴浩渺的攀登者",
-    languageRanking: [
+    languageRanking: [ 
         { name: "Python", value: 33.27 },
         { name: "C++", value: 29.17 },
         { name: "Java", value: 13.27 },
@@ -41,8 +41,8 @@ function WordCloudComponent(props) {
       series: [{
         type: 'wordCloud',
         sizeRange: [4, 32],
-        gridSize: 1,
-        width: "140px",
+        gridSize: 2,
+        width: "135px",
         textStyle: {
           normal: {
             fontFamily: 'Arial',
@@ -72,11 +72,11 @@ function WordCloudComponent(props) {
 
 function IconComponent(props) {
   let cssName = ""
-  if (props.cssType == "left") {
+  if (props.cssType === "left") {
     cssName = "icon-item-left"
-  } else if (props.cssType == "right") {
+  } else if (props.cssType === "right") {
     cssName = "icon-item-right"
-  } else if (props.cssType == "middle") {
+  } else if (props.cssType === "middle") {
     cssName = "icon-item-middle"
   } else {
     throw new Error("cssType must be left or right: " + props.cssType + " is not allowed")
@@ -97,7 +97,8 @@ class Poster extends Component {
   render() {
     const hasTitle = this.props.title;
     const hasSubTitle = this.props.subtitle;
-    const data = this.props?.data || fakeData;
+    const username = this.props.username;
+    const data = this.props.data || fakeData;
 
     return (
       <div className="column poster-container">
@@ -156,7 +157,7 @@ class Poster extends Component {
 				</Pie>
 				</PieChart>
 			</div>
-			<div style={{margin: "5px", width: '100%'}}>
+			<div style={{margin: "8px", marginRight: "12px", marginLeft: "0px", width: '100%'}}>
 			  <WordCloudComponent words={data.repoTopic}/>
 			</div>
         </div>
@@ -169,8 +170,8 @@ class Poster extends Component {
           <h4 style={{color: 'rgb(121, 77, 65)', marginBottom: "0px"}}>Anything one man can imagine,</h4>
           <h4 style={{color: 'rgb(121, 77, 65)', marginBottom: "0px", marginTop: "0px"}}>other men can make real.</h4>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end" }}>
-            <div style={{ position: "absolute", bottom: 0, margin: "0px" }}>
-              <h5>{"OpenDILab 出品，版权所有 © 2023"}</h5>
+            <div style={{ position: "absolute", bottom: "2px", margin: "0px" }}>
+              <text style={{ fontSize: "10px", fontWeight: 800}}>{"OpenDILab 出品，版权所有 © 2023"}</text>
             </div>
             <div style={{ position: "absolute", bottom: 0, right: 0, margin: "4px" }}>
               <QRCodeSVG value="https://github.com/opendilab/CodeMorpheus" size={32} fgColor={"#AE2012"}/>
