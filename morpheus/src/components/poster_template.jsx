@@ -34,6 +34,7 @@ function WordCloudComponent() {
         type: 'wordCloud',
         sizeRange: [4, 32],
         gridSize: 1,
+        width: "140px",
         textStyle: {
           normal: {
             fontFamily: 'Arial',
@@ -86,16 +87,11 @@ function IconComponent(props) {
 
 class Poster extends Component {
   render() {
-    const styles = {
-      backgroundImage: `url(${this.props.image})`,
-      backgroundRepeat: `no-repeat`,
-      backgroundSize: `cover`
-    };
     const hasTitle = this.props.title;
     const hasSubTitle = this.props.subtitle;
 
     return (
-      <div className="column poster-container" style={styles}>
+      <div className="column poster-container">
         <header>
           {/* <small className="poster-byline">A posterly original poster</small> */}
           {hasTitle ? <h2 className="poster-title">{this.props.title}</h2> : ''}
@@ -131,16 +127,16 @@ class Poster extends Component {
           <text className="rectangle-text"> GitHub 可视化 </text>
         </div>
         <div className="grid-container">
-			<div style={{margin: "10px", width: '100%'}}>
-				<PieChart width={180} height={140}>
+			<div style={{margin: "5px", marginLeft: "10px", marginRight: "0px", width: '100%'}}>
+				<PieChart width={150} height={140}>
 				<Pie
 					activeIndex={data.map((_, index) => index)}
 					activeShape={renderActiveShape}
 					data={data}
 					cx={60}
 					cy={60}
-					innerRadius={17}
-					outerRadius={24}
+					innerRadius={16}
+					outerRadius={22}
 					fill="#8884d8"
 					dataKey="value"
 					paddingAngle={3}
@@ -151,24 +147,24 @@ class Poster extends Component {
 				</Pie>
 				</PieChart>
 			</div>
-			<div style={{margin: "10px", width: '100%'}}>
+			<div style={{margin: "5px", width: '100%'}}>
 			  <WordCloudComponent />
 			</div>
         </div>
         <div className="icon-item-middle2"> 
-          <button className="github-button">
-            称号：磅礴浩渺的攀登者
+          <button className="github-button" style={{fontSize: "16px"}}>
+            磅礴浩渺的攀登者
           </button>
         </div>
-          <div className="blank-area-tiny"></div>
         <footer className="poster-footer">
-          <h3 style={{color: 'rgb(121, 77, 65)', marginBottom: "0px"}}>{this.props.footer}</h3>
+          <h4 style={{color: 'rgb(121, 77, 65)', marginBottom: "0px"}}>Anything one man can imagine,</h4>
+          <h4 style={{color: 'rgb(121, 77, 65)', marginBottom: "0px", marginTop: "0px"}}>other men can make real.</h4>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end" }}>
             <div> 
               <h5>{"OpenDILab 出品，版权所有 © 2023"}</h5>
             </div>
-            <div style={{ position: "absolute", bottom: 0, right: 0, margin: "8px" }}>
-              <QRCodeSVG value="https://github.com/opendilab/CodeMorpheus" size={36} fgColor={"#AE2012"}/>
+            <div style={{ position: "absolute", bottom: 0, right: 0, margin: "4px" }}>
+              <QRCodeSVG value="https://github.com/opendilab/CodeMorpheus" size={32} fgColor={"#AE2012"}/>
             </div>
           </div>
         </footer>

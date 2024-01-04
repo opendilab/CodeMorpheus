@@ -53,7 +53,7 @@ export const renderActiveShape = (props: any) => {
   const textAnchor = cos >= 0 ? "start" : "end";
 
   return (
-    <g transform="translate(32, 0)">
+    <g transform="translate(12, 0)">
       <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
         {""}
       </text>
@@ -84,7 +84,7 @@ export const renderActiveShape = (props: any) => {
       <text
         x={ex + (cos >= 0 ? 1 : -1) * 6}
         y={ey}
-        fontSize="8px"
+        fontSize="7px"
         textAnchor={textAnchor}
         fill="#333"
       >
@@ -94,7 +94,7 @@ export const renderActiveShape = (props: any) => {
         x={ex + (cos >= 0 ? 1 : -1) * 6}
         y={ey}
         dy={10}
-        fontSize="8px"
+        fontSize="7px"
         textAnchor={textAnchor}
         fill="#999"
       >
