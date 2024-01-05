@@ -56,10 +56,10 @@ function Entry(props) {
           </button>
       </form>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end" }}>
-            <div style={{ position: "absolute", bottom: "22px", margin: "0px", color: "rgb(199, 93, 77)"}}>
+            <div style={{ position: "absolute", bottom: "22px", margin: "0px", color: "rgb(202, 82, 68)"}}>
               <span style={{ fontSize: "10px", fontWeight: 800}}>{"OpenDILab 出品，版权所有 © 2023"}</span>
             </div>
-            <div style={{ position: "absolute", bottom: 0, right: 0, margin: "24px" }}>
+            <div style={{ position: "absolute", bottom: 0, right: 0, marginBottom: "20px", marginRight: "18px"}}>
               <QRCodeSVG value="https://github.com/opendilab/CodeMorpheus" size={32} fgColor={"#AE2012"}/>
             </div>
           </div>

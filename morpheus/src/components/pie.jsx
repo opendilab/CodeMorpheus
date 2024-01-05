@@ -48,8 +48,9 @@ export const renderActiveShape = (props: any) => {
   const sy = cy + (outerRadius + 5) * sin;
   const mx = cx + (outerRadius + 15) * cos;
   const my = cy + (outerRadius + 15) * sin;
-  const ex = mx + (cos >= 0 ? 1 : -1) * 6;
-  const ey = my;
+  const ex = mx + (cos >= 0 ? 1 : -1) * 6 ;
+  const delta = Math.abs(sin) * 2 + 0.2
+  const ey = my + (sin >= 0 ? delta : -delta) * 10;
   const textAnchor = cos >= 0 ? "start" : "end";
 
   return (
@@ -82,8 +83,8 @@ export const renderActiveShape = (props: any) => {
       />
       <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
       <text
-        x={ex + (cos >= 0 ? 1 : -1) * 6}
-        y={ey}
+        x={ex + (cos >= 0 ? 1 : -1) * 4}
+        y={ey + 2}
         fontSize="7px"
         textAnchor={textAnchor}
         fill="#333"
@@ -91,10 +92,10 @@ export const renderActiveShape = (props: any) => {
         {`${payload.name}`}
       </text>
       <text
-        x={ex + (cos >= 0 ? 1 : -1) * 6}
-        y={ey}
-        dy={10}
-        fontSize="7px"
+        x={ex + (cos >= 0 ? 1 : -1) * 4}
+        y={ey + 2}
+        dy={7}
+        fontSize="6px"
         textAnchor={textAnchor}
         fill="#999"
       >

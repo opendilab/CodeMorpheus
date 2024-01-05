@@ -42,7 +42,7 @@ function WordCloudComponent(props) {
         type: 'wordCloud',
         sizeRange: [4, 32],
         gridSize: 2,
-        width: "135px",
+        width: "155px",
         textStyle: {
           normal: {
             fontFamily: 'Arial',
@@ -86,8 +86,8 @@ function IconComponent(props) {
   return (
     <div className={cssName}>
       <button className="github-button">
-        <Icon size={20} fill={"rgb(199, 93, 77"}/> 
-        <span color="rgb(250, 50, 50)" style={{marginLeft: "10px"}}>{props.text}</span>
+        <Icon size={20} fill={"rgb(202, 82, 68"}/> 
+        <span style={{marginLeft: "10px"}}>{props.text}</span>
       </button>
     </div>
   )
@@ -114,7 +114,7 @@ class Poster extends Component {
                     href="https://github.com/opendilab/CodeMorpheus"
                     rel="noopener noreferrer"
                 >
-                    <MarkGithubIcon size={16} fill={"rgb(199, 93, 77"}/> 
+                    <MarkGithubIcon size={16} fill={"rgb(202, 82, 68"}/> 
                 </a>
                 </button>
             </div>
@@ -137,8 +137,8 @@ class Poster extends Component {
           <span className="rectangle-text"> 小孔成像 </span>
         </div>
         <div className="grid-container">
-			<div style={{margin: "5px", marginLeft: "10px", marginRight: "0px", width: '100%'}}>
-				<PieChart width={150} height={140}>
+			<div style={{marginTop: "10px", marginBottom: "0px", marginLeft: "5px", marginRight: "5px", width: '100%'}}>
+				<PieChart width={160} height={150}>
 				<Pie
 					activeIndex={data.languageRanking.map((_, index) => index)}
 					activeShape={renderActiveShape}
@@ -157,7 +157,7 @@ class Poster extends Component {
 				</Pie>
 				</PieChart>
 			</div>
-			<div style={{margin: "8px", marginRight: "12px", marginLeft: "0px", width: '100%'}}>
+			<div style={{margin: "8px", marginRight: "5px", marginLeft: "0px", width: '100%'}}>
 			  <WordCloudComponent words={data.repoTopic}/>
 			</div>
         </div>
@@ -173,7 +173,7 @@ class Poster extends Component {
             <div style={{ position: "absolute", bottom: "2px", margin: "0px" }}>
               <span style={{ fontSize: "10px", fontWeight: 800}}>{"OpenDILab 出品，版权所有 © 2023"}</span>
             </div>
-            <div style={{ position: "absolute", bottom: 0, right: 0, margin: "4px" }}>
+            <div style={{ position: "absolute", bottom: 0, right: 0, marginBottom: "2px", marginRight: "4px"}}>
               <QRCodeSVG value="https://github.com/opendilab/CodeMorpheus" size={32} fgColor={"#AE2012"}/>
             </div>
           </div>
