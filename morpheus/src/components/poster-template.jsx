@@ -87,7 +87,7 @@ function IconComponent(props) {
     <div className={cssName}>
       <button className="github-button">
         <Icon size={20} fill={"rgb(199, 93, 77"}/> 
-        <text color="rgb(250, 50, 50)" style={{marginLeft: "10px"}}>{props.text}</text>
+        <span color="rgb(250, 50, 50)" style={{marginLeft: "10px"}}>{props.text}</span>
       </button>
     </div>
   )
@@ -124,7 +124,7 @@ class Poster extends Component {
         </header>
           <div className="blank-area-tiny"></div>
         <div className="rectangle">
-          <text className="rectangle-text"> 言之有物 </text>
+          <span className="rectangle-text"> 言之有物 </span>
         </div>
         <div className="grid-container">
           <IconComponent text={`总操作数：${data.totalOperation}`} cssType="left" icon={MarkGithubIcon}/>
@@ -134,7 +134,7 @@ class Poster extends Component {
         </div>
           <IconComponent text={`最关注：${data.favoriteRepo}`} cssType="middle" icon={StarIcon}/>
         <div className="rectangle">
-          <text className="rectangle-text"> 小孔成像 </text>
+          <span className="rectangle-text"> 小孔成像 </span>
         </div>
         <div className="grid-container">
 			<div style={{margin: "5px", marginLeft: "10px", marginRight: "0px", width: '100%'}}>
@@ -171,7 +171,7 @@ class Poster extends Component {
           <h4 style={{color: 'rgb(121, 77, 65)', marginBottom: "0px", marginTop: "0px"}}>other men can make real.</h4>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end" }}>
             <div style={{ position: "absolute", bottom: "2px", margin: "0px" }}>
-              <text style={{ fontSize: "10px", fontWeight: 800}}>{"OpenDILab 出品，版权所有 © 2023"}</text>
+              <span style={{ fontSize: "10px", fontWeight: 800}}>{"OpenDILab 出品，版权所有 © 2023"}</span>
             </div>
             <div style={{ position: "absolute", bottom: 0, right: 0, margin: "4px" }}>
               <QRCodeSVG value="https://github.com/opendilab/CodeMorpheus" size={32} fgColor={"#AE2012"}/>

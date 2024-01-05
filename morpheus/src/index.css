@@ -23,6 +23,54 @@ body {
   height: 100vh;
 }
 
+.entry {
+  width: 100vw;
+  height: 100vh;
+}
+
+.loading {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form-container {
+  display: flex;
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: row;
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+}
+.form-container input[type="text"],
+.form-container textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container button {
+  background-color: rgb(202, 82, 68);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 40px;
+  padding: 0px;
+  height: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: rgb(192, 72, 58);
+}
+
 .column:nth-child(1) {
   background-color: rgba(0, 0, 0, 0.04);
 }
