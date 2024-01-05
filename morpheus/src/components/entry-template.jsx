@@ -1,8 +1,6 @@
-import React from 'react';
 import { QRCodeSVG } from 'qrcode.react';
-import { PaperAirplaneIcon } from "@primer/octicons-react";
+import { PaperAirplaneIcon, GiftIcon } from "@primer/octicons-react";
 import image from "components/entry_new.png";
-
 
 
 function FailedTask(props) {
@@ -15,12 +13,21 @@ function FailedTask(props) {
     );
 }
 
+function SuccessfulTask(props) {
+    return (
+        <div className="photo-frame">
+            <img src={props.imgUrl}  alt="CodeMorpheus" />
+            <span className="notfound">攻城狮 or 调参侠</span>
+            <button className="gift-button" onClick={() => props.setDiveIn(true)}>
+              <GiftIcon size={12} />
+            </button>
+        </div>
+    );
+}
+
 function Entry(props) {
-  const [isLoading, setIsLoading] = React.useState(false);
   const handleSubmit = e => {
     e.preventDefault();  // necessary
-    setIsLoading(true);
-    console.log('call handleSubmit', e)
     props.setUserName(e.target[0].value);
   };
   const styles = {
@@ -30,19 +37,21 @@ function Entry(props) {
   };
 
   const waitingImageUrl = process.env.REACT_APP_WAITING_IMAGE_URL
-  console.log('wq', waitingImageUrl)
 
   return (
     <div className="entry" style={styles}>
-      {isLoading && (
+      {props.isLoading && (
       <div className="photo-frame">
           <img src={waitingImageUrl}  alt="CodeMorpheus" />
           <span className="notfound">飞速运转中...</span>
       </div>
       )}
+      {props.isFetched && (
+        props.isSuccess ? (<SuccessfulTask imgUrl={props.imgUrl} setDiveIn={props.setDiveIn}/>) : (<FailedTask />)
+      )}
       <form onSubmit={handleSubmit} className="form-container">
           <input type="text" placeholder="请输入您的 GitHub 用户名"/>
-          <button type="submit" disabled={isLoading}>
+          <button type="submit" disabled={props.isLoading}>
             <PaperAirplaneIcon size={16} />
           </button>
       </form>

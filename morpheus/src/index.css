@@ -347,7 +347,7 @@ button {
 
 .photo-frame {
   position: absolute;
-  bottom: 30%;
+  bottom: 33%;
   left: 50%;
   transform: translateX(-50%);
   width: 210px;
@@ -369,4 +369,20 @@ button {
   font-size: 1.25rem;
   color: rgb(202, 82, 68);
   margin-top: 0.75rem;
+}
+
+.gift-button {
+  margin-top: 0.75rem;
+  background-color: rgb(202, 82, 68);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 20px;
+  padding: 0px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

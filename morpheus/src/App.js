@@ -10,6 +10,9 @@ class App extends Component {
     subtitle: '2023 GitHub 自画像',
     username: '',
     data: null,
+    isLoading: false,
+    isFetched: false,
+    isSuccess: false,
     diveIn: false,
   };
 
@@ -32,36 +35,40 @@ class App extends Component {
         }
     ).then(response => response.json())
      .then(data => formatData(data))
-     .then(data => this.setState({ data: data }))
+     .then(data => this.setState({ data: data, isFetched: true, isLoading: false, isSuccess: (data.statusCode === 200) }))
      .catch(error => console.error("fetch error", error));
-    
+
     this.setState({ username: '' });
   }
 
 
   render() {
     const setUserName = (username) => {
-        this.setState({ username: username });
+        this.setState({ username: username, isLoading: true, isFetched: false, isSuccess: false });
     };
 
-    if (!this.state.data) {
+    const setDiveIn = (diveIn) => {
+        this.setState({ diveIn: diveIn });
+    };
+
+    if (this.state.isSuccess && this.state.diveIn) {
         return (
-            <div className="container">
-              <Entry setUserName={setUserName}/>
-            </div>
+        <div className="container">
+            <Poster
+            title={this.state.title}
+            subtitle={this.state.subtitle}
+            data={this.state.data}
+            />
+        </div>
         );
     }
-    console.log('render')
 
     return (
-      <div className="container">
-        <Poster
-          title={this.state.title}
-          subtitle={this.state.subtitle}
-          data={this.state.data}
-        />
-      </div>
+        <div className="container">
+            <Entry setUserName={setUserName} setDiveIn={setDiveIn} imgUrl={this.state.data?.imgUrl} isLoading={this.state.isLoading} isSuccess={this.state.isSuccess} isFetched={this.state.isFetched} />
+        </div>
     );
+
   }
 }
 

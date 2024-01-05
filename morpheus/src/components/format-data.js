@@ -12,6 +12,7 @@ export function formatData(rawData) {
             languageRanking: [],
             imgUrl: '',
             repoTopic: 0,
+            statusCode: statusCode,
         }
     } else {
         const tmp = data.later_time.split('-')
@@ -26,6 +27,7 @@ export function formatData(rawData) {
             languageRanking: Object.entries(data.language_ranking).map(item => {return { name: item[0], value: item[1] }}),
             imgUrl: data.img_url,
             repoTopic: data.topic_total,
+            statusCode: statusCode,
         }
     }
 }
