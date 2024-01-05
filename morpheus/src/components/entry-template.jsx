@@ -4,6 +4,17 @@ import { PaperAirplaneIcon } from "@primer/octicons-react";
 import image from "components/entry_new.png";
 
 
+
+function FailedTask(props) {
+    const failImageUrl = process.env.REACT_APP_FAIL_IMAGE_URL
+    return (
+        <div className="photo-frame">
+            <img src={failImageUrl}  alt="CodeMorpheus" />
+            <span className="notfound">查无此人</span>
+        </div>
+    );
+}
+
 function Entry(props) {
   const [isLoading, setIsLoading] = React.useState(false);
   const handleSubmit = e => {
@@ -18,10 +29,16 @@ function Entry(props) {
     backgroundSize: `cover`
   };
 
+  const waitingImageUrl = process.env.REACT_APP_WAITING_IMAGE_URL
+  console.log('wq', waitingImageUrl)
+
   return (
     <div className="entry" style={styles}>
       {isLoading && (
-        <div className="loading">Loading...</div>
+      <div className="photo-frame">
+          <img src={waitingImageUrl}  alt="CodeMorpheus" />
+          <span className="notfound">飞速运转中...</span>
+      </div>
       )}
       <form onSubmit={handleSubmit} className="form-container">
           <input type="text" placeholder="请输入您的 GitHub 用户名"/>

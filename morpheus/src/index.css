@@ -344,3 +344,29 @@ button {
     opacity: 0;
   }
 }
+
+.photo-frame {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 210px;
+  height: 280px;
+  border: 8px solid #f8f9fa;
+  padding: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.notfound {
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: rgb(202, 82, 68);
+  margin-top: 0.75rem;
+}

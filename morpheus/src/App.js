@@ -10,6 +10,7 @@ class App extends Component {
     subtitle: '2023 GitHub 自画像',
     username: '',
     data: null,
+    diveIn: false,
   };
 
   componentDidUpdate() {
@@ -25,6 +26,7 @@ class App extends Component {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${process.env.REACT_APP_API_KEY || ''}`,
             },
             body: JSON.stringify({'username': username}),
         }
