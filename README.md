@@ -51,7 +51,7 @@ You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload 
 ```
 
 ## News
-- 2024.01.08: We released the GitHub year-end wraparound version of CodeMorpheus, come and try! [Online trial](morpheus.opendilab.org.cn) [Release note](https://zhuanlan.zhihu.com/p/676509763)
+- 2024.01.08: We released the GitHub year-end wraparound version of CodeMorpheus, come and try! [Online trial](https://morpheus.opendilab.org.cn) and [Release note](https://zhuanlan.zhihu.com/p/676509763)
 
 ## :speech_balloon: Feedback and Contribution
 - [File an issue](https://github.com/opendilab/CodeMorpheus/issues/new/choose) on Github
