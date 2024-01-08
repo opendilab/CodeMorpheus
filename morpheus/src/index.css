@@ -177,6 +177,10 @@ button {
   color: #FFFFFF;
   margin-left: 0.5rem;
 }
+.rectangle-icon {
+  margin-left: 0.5rem;
+  color: rgb(202, 82, 68);
+}
 
 .blank-area-small {
   width: 90%;
@@ -283,12 +287,12 @@ button {
 .github-button-back {
   display: inline-flex;
   align-items: center;
-  width: 2%;
+  width: 1.5%;
   position: absolute;
   top: 1%;
   left: 1.5%;
   justify-content: center;
-  padding: 2% 3.5%;
+  padding: 1.5% 3%;
   font-size: 13px;
   font-weight: bold;
   text-align: center;

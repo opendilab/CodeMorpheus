@@ -3,7 +3,7 @@ import { PieChart, Pie, Cell } from "recharts";
 import * as echarts from 'echarts';
 import * as React from 'react'
 import 'echarts-wordcloud';
-import { TrophyIcon, MarkGithubIcon, GitPullRequestIcon, GitCommitIcon, StarIcon, ClockIcon, ArrowLeftIcon } from '@primer/octicons-react'
+import { TrophyIcon, TelescopeIcon, MarkGithubIcon, GitPullRequestIcon, GitCommitIcon, StarIcon, ClockIcon, ArrowLeftIcon } from '@primer/octicons-react'
 import {QRCodeSVG} from 'qrcode.react';
 import { renderActiveShape, COLORS } from 'components/pie'
 
@@ -122,6 +122,7 @@ class Poster extends Component {
         </header>
           <div className="blank-area-tiny"></div>
         <div className="rectangle">
+          <TrophyIcon size={16} fill={"rgb(202, 152, 128)"} style={{ marginLeft: "20px"}} className="rectangle-icon"/>
           <span className="rectangle-text"> 言之有物 </span>
         </div>
         <div className="grid-container">
@@ -132,6 +133,7 @@ class Poster extends Component {
         </div>
           <IconComponent text={`最关注：${data.favoriteRepo}`} cssType="middle" icon={StarIcon}/>
         <div className="rectangle">
+          <TelescopeIcon size={16} fill={"rgb(202, 152, 128)"} style={{ marginLeft: "20px"}} className="rectangle-icon"/>
           <span className="rectangle-text"> 小孔成像 </span>
         </div>
         <div className="grid-container">
