@@ -9,6 +9,9 @@
 
 P.S. 路过记得点个 star ![stars - codemorpheus](https://img.shields.io/github/stars/opendilab/codemorpheus?style=social) ，持续更新ing。
 
+## News
+- 2024.01.08: 我们发布了 GitHub 年终盘点版本的CodeMprpheus，欢迎大家点击试玩！ [在线试玩](https://morpheus.opendilab.org.cn) and [知乎文章](https://zhuanlan.zhihu.com/p/676509763)
+
 ## :star_struck: 快速上手指南
 
 ### 直接输入代码
@@ -41,12 +44,14 @@ P.S. 路过记得点个 star ![stars - codemorpheus](https://img.shields.io/gith
 .
 ├── LICENSE
 ├── assets                       --> 相关图片素材（转载请注明来源）
+├── morpheus                     --> GitHub 年终盘点相关代码
 ├── template_data                --> 样例数据
 ├── analysis.py                  --> 使用量统计代码
 ├── app.py                       --> Gradio App 代码
 ├── code2pil.py                  --> 图片生成代码
 ├── examples.py                  --> 代码样例
 └── language_model.py            --> 语言模型代码
+
 
 ```
 
