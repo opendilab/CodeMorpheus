@@ -44,13 +44,14 @@ You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload 
 .
 ├── LICENSE
 ├── assets                       --> media assets (please indicate the source if you want to reprint)
+├── morpheus                     --> code for GitHub year-end summary
 ├── template_data                --> data for examples
 ├── analysis.py                  --> code for usage statistics
 ├── app.py                       --> code for Gradio App
 ├── code2pil.py                  --> code for image generation
 ├── examples.py                  --> code examples
-├── language_model.py            --> code for language model
-└── morpheus                     --> code for GitHub year-end summary
+└── language_model.py            --> code for language model
+
 
 ```
 
