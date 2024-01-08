@@ -177,7 +177,7 @@ class Poster extends Component {
               <span style={{ fontSize: "10px", fontWeight: 800}}>{"OpenDILab 出品，版权所有 © 2023"}</span>
             </div>
             <div style={{ position: "absolute", bottom: 0, right: 0, marginBottom: "2px", marginRight: "4px"}}>
-              <QRCodeSVG value="https://github.com/opendilab/CodeMorpheus" size={32} fgColor={"#AE2012"}/>
+              <QRCodeSVG value="https://morpheus.opendilab.org.cn" size={32} fgColor={"#AE2012"}/>
             </div>
           </div>
         </footer>

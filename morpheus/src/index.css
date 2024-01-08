@@ -165,7 +165,7 @@ button {
 }
 
 .rectangle {
-  width: 45%;
+  width: 35%;
   height: 30px;
   background-color: rgb(199, 91, 71);
   box-shadow: 3px 2px 4px rgba(119, 71, 60);
@@ -283,7 +283,7 @@ button {
 .github-button-back {
   display: inline-flex;
   align-items: center;
-  width: 3%;
+  width: 2%;
   position: absolute;
   top: 1%;
   left: 1.5%;
@@ -351,10 +351,8 @@ button {
   margin-top: 0.85rem;
   background-color: rgb(202, 82, 68);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-left: 1.5%;
-  width: 20px;
+  font-size: 16px;
   padding: 0px;
-  height: 20px;
   color: #fff;
   border: none;
   border-radius: 4px;

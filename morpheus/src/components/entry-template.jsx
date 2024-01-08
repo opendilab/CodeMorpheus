@@ -1,5 +1,6 @@
 import { QRCodeSVG } from 'qrcode.react';
 import { PaperAirplaneIcon, GiftIcon } from "@primer/octicons-react";
+import PacmanLoader from "react-spinners/PacmanLoader";
 import image from "components/entry_new_h.png";
 
 
@@ -18,9 +19,8 @@ function SuccessfulTask(props) {
         <div className="photo-frame">
             <img src={props.imgUrl}  alt="CodeMorpheus" />
             <div className="photo-frame-info">
-            <span className="notfound">你的身份究竟是？</span>
             <button className="gift-button" onClick={() => props.setDiveIn(true)}>
-              <GiftIcon size={12} />
+              你的身份究竟是?
             </button>
             </div>
         </div>
@@ -43,7 +43,16 @@ function Entry(props) {
       {props.isLoading && (
       <div className="photo-frame">
           <img src={waitingImageUrl}  alt="CodeMorpheus" />
-          <span className="notfound">飞速运转中...</span>
+          <span className="notfound">飞速运转中 (10-20s)</span>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end" }}>
+        <PacmanLoader
+        color={"rgb(202, 82, 68)"}
+        loading={props.loading}
+        size={15}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+        />
+          </div>
       </div>
       )}
       {props.isFetched && (
@@ -60,7 +69,7 @@ function Entry(props) {
               <span style={{ fontSize: "10px", fontWeight: 800}}>{"OpenDILab 出品，版权所有 © 2023"}</span>
             </div>
             <div style={{ position: "absolute", bottom: 0, right: 0, marginBottom: "1%", marginRight: "6%"}}>
-              <QRCodeSVG value="https://github.com/opendilab/CodeMorpheus" size={32} fgColor={"#AE2012"}/>
+              <QRCodeSVG value="https://morpheus.opendilab.org.cn" size={32} fgColor={"#AE2012"}/>
             </div>
           </div>
     </div>
