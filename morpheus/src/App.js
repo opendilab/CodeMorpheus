@@ -55,9 +55,10 @@ class App extends Component {
         return (
         <div className="container">
             <Poster
-            title={this.state.title}
-            subtitle={this.state.subtitle}
-            data={this.state.data}
+              title={this.state.title}
+              subtitle={this.state.subtitle}
+              data={this.state.data}
+              setDiveIn={setDiveIn}
             />
         </div>
         );

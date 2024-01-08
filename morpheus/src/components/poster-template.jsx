@@ -3,7 +3,7 @@ import { PieChart, Pie, Cell } from "recharts";
 import * as echarts from 'echarts';
 import * as React from 'react'
 import 'echarts-wordcloud';
-import { TrophyIcon, MarkGithubIcon, GitPullRequestIcon, GitCommitIcon, StarIcon, ClockIcon } from '@primer/octicons-react'
+import { TrophyIcon, MarkGithubIcon, GitPullRequestIcon, GitCommitIcon, StarIcon, ClockIcon, ArrowLeftIcon } from '@primer/octicons-react'
 import {QRCodeSVG} from 'qrcode.react';
 import { renderActiveShape, COLORS } from 'components/pie'
 
@@ -25,9 +25,7 @@ const fakeData = {
     imgUrl: "https://psydi.oss-cn-shanghai.aliyuncs.com/codemorpheus%2Fdemo_diffusion.png?x-oss-process&OSSAccessKeyId=LTAI5tJqfodvyN7cj7pHuYYn&Expires=1711646125&Signature=PiLESGJ7ZfP3gsB9pYxDoUflj0k%3D",
     repoTopic: {'RL': 5, 'deep-learning': 3, 'imitation-learning': 3, 'reinforcement-learning-algorithms': 3, 'nextjs': 3, 'react': 3, 'vercel': 3, 'chatgpt': 2, 'llm': 2, 'inverse-reinforcement-learning': 2, 'model-based-reinforcement-learning': 2, 'offline-rl': 2, 'pytorch-rl': 2, 'deep-reinforcement-learning': 2, 'large-language-models': 2, 'atari': 2, 'pytorch': 2, 'self-play': 2, 'compiler': 2, 'agent': 1},
 };
-        //<div style={{margin: "15px", justifyContent: "center", display: 'flex'}}>
-        // <img src={imgUrl} alt="sd image" style={{ width: '90%' }} />
-        //</div>
+
 function WordCloudComponent(props) {
   const chartRef = useRef(null);
 
@@ -164,6 +162,11 @@ class Poster extends Component {
         <div className="icon-item-middle2"> 
           <button className="github-button" style={{fontSize: "16px"}}>
             {data.label}
+          </button>
+        </div>
+        <div>
+          <button className="github-button-back" onClick={() => this.props.setDiveIn(false)}> 
+            <ArrowLeftIcon size={14} />
           </button>
         </div>
         <footer className="poster-footer">

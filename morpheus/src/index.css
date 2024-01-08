@@ -22,7 +22,8 @@ body {
 
 .column {
   height: 100vh;
-  max-width:100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .entry {
@@ -184,7 +185,8 @@ button {
 }
 .blank-area-tiny {
   width: 200px;
-  height: 20px;
+  margin-top: 1%;
+  height: 4%;
   background-color: rgb(245, 245, 245);
 }
 .blank-area {
@@ -276,6 +278,25 @@ button {
   user-select: none;
   border: 1px solid #d1d5da;
   border-radius: 6px;
+}
+.github-button-back {
+  display: inline-flex;
+  align-items: center;
+  width: 3%;
+  position: absolute;
+  top: 1%;
+  left: 1.5%;
+  justify-content: center;
+  padding: 2% 3.5%;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: none;
+  user-select: none;
+  border: 1px solid #d1d5da;
+  border-radius: 16px;
 }
 
 @keyframes blinking-animation {

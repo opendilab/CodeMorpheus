@@ -54,7 +54,7 @@ export const renderActiveShape = (props: any) => {
   const textAnchor = cos >= 0 ? "start" : "end";
 
   return (
-    <g transform="translate(12, 0)">
+    <g transform="translate(14, 0)">
       <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
         {""}
       </text>
