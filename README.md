@@ -49,7 +49,7 @@ You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload 
 ├── app.py                       --> code for Gradio App
 ├── code2pil.py                  --> code for image generation
 ├── examples.py                  --> code examples
-└── language_model.py            --> code for language model
+├── language_model.py            --> code for language model
 └── morpheus                     --> code for GitHub year-end summary
 
 ```
