@@ -1,6 +1,6 @@
 import { QRCodeSVG } from 'qrcode.react';
 import { PaperAirplaneIcon, GiftIcon } from "@primer/octicons-react";
-import image from "components/entry_new.png";
+import image from "components/entry_new_h.png";
 
 
 function FailedTask(props) {
@@ -18,7 +18,7 @@ function SuccessfulTask(props) {
         <div className="photo-frame">
             <img src={props.imgUrl}  alt="CodeMorpheus" />
             <div className="photo-frame-info">
-            <span className="notfound">攻城狮 or 调参侠</span>
+            <span className="notfound">你的身份究竟是？</span>
             <button className="gift-button" onClick={() => props.setDiveIn(true)}>
               <GiftIcon size={12} />
             </button>
@@ -56,10 +56,10 @@ function Entry(props) {
           </button>
       </form>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end" }}>
-            <div style={{ position: "absolute", bottom: "22px", margin: "0px", color: "rgb(202, 82, 68)"}}>
+            <div style={{ position: "absolute", bottom: "1%", margin: "0px", color: "rgb(202, 82, 68)"}}>
               <span style={{ fontSize: "10px", fontWeight: 800}}>{"OpenDILab 出品，版权所有 © 2023"}</span>
             </div>
-            <div style={{ position: "absolute", bottom: 0, right: 0, marginBottom: "20px", marginRight: "18px"}}>
+            <div style={{ position: "absolute", bottom: 0, right: 0, marginBottom: "1%", marginRight: "6%"}}>
               <QRCodeSVG value="https://github.com/opendilab/CodeMorpheus" size={32} fgColor={"#AE2012"}/>
             </div>
           </div>

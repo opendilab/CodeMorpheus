@@ -52,9 +52,11 @@ export const renderActiveShape = (props: any) => {
   const delta = Math.abs(sin) * 2 + 0.2
   const ey = my + (sin >= 0 ? delta : -delta) * 10;
   const textAnchor = cos >= 0 ? "start" : "end";
+  let pageWidth = document.documentElement.clientWidth;
+  let x = pageWidth * 0.06;
 
   return (
-    <g transform="translate(14, 0)">
+    <g transform={`translate(${x}, 0)`}>
       <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
         {""}
       </text>
