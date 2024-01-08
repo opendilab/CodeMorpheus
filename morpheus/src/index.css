@@ -14,6 +14,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   height: 100vh;
+  max-width:100%;
 }
 
 .container {
@@ -21,18 +22,16 @@ body {
 
 .column {
   height: 100vh;
+  max-width:100%;
 }
 
 .entry {
   width: 100vw;
   height: 100vh;
-}
-
-.loading {
-  position: absolute;
-  bottom: 40%;
-  left: 50%;
-  transform: translateX(-50%);
+  max-width:100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form-container {
@@ -42,7 +41,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   flex-direction: row;
-  width: 300px;
+  width: 85%;
   margin: auto;
   padding: 20px;
 }
@@ -51,6 +50,7 @@ body {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 13px;
   height: 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -162,15 +162,6 @@ button {
   font-size: 0.5rem;
 }
 
-.print-icon {
-  bottom: 2rem;
-  height: auto;
-  max-width: 50px;
-  position: absolute;
-  right: 2rem;
-  opacity: 0.25;
-}
-
 .rectangle {
   width: 45%;
   height: 30px;
@@ -186,7 +177,7 @@ button {
 }
 
 .blank-area-small {
-  width: 335px;
+  width: 90%;
   height: 15px;
   margin: 10px;
   background-color: rgb(245, 245, 245);
@@ -303,55 +294,21 @@ button {
   animation: blinking-animation 2s infinite;
 }
 
-.wave-button {
-  position: relative;
-  border: none;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-}
-
-.wave-button.wave:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  opacity: 0.5;
-  animation: waveAnimation 1s linear;
-}
-
-@keyframes waveAnimation {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 0.5;
-  }
-  100% {
-    width: 200%;
-    height: 200%;
-    opacity: 0;
-  }
-}
-
 .photo-frame {
   position: absolute;
   bottom: 33%;
   left: 50%;
   transform: translateX(-50%);
-  width: 210px;
-  height: 280px;
+  width: 180px;
+  height: 240px;
   border: 8px solid #f8f9fa;
   padding: 0px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.photo-frame-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .photo-frame img {
@@ -363,21 +320,19 @@ button {
 .notfound {
   display: flex;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: rgb(202, 82, 68);
   margin-top: 0.75rem;
 }
 
 .gift-button {
-  margin-top: 0.75rem;
+  margin-top: 0.85rem;
   background-color: rgb(202, 82, 68);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
   width: 20px;
   padding: 0px;
   height: 20px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   color: #fff;
   border: none;
   border-radius: 4px;

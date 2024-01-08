@@ -17,10 +17,12 @@ function SuccessfulTask(props) {
     return (
         <div className="photo-frame">
             <img src={props.imgUrl}  alt="CodeMorpheus" />
+            <div className="photo-frame-info">
             <span className="notfound">攻城狮 or 调参侠</span>
             <button className="gift-button" onClick={() => props.setDiveIn(true)}>
               <GiftIcon size={12} />
             </button>
+            </div>
         </div>
     );
 }
@@ -32,8 +34,6 @@ function Entry(props) {
   };
   const styles = {
     backgroundImage: `url(${image})`,
-    backgroundRepeat: `no-repeat`,
-    backgroundSize: `cover`
   };
 
   const waitingImageUrl = process.env.REACT_APP_WAITING_IMAGE_URL
