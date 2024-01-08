@@ -10,7 +10,7 @@
 P.S. 路过记得点个 star ![stars - codemorpheus](https://img.shields.io/github/stars/opendilab/codemorpheus?style=social) ，持续更新ing。
 
 ## News
-- 2024.01.08: 我们发布了 GitHub 年终盘点版本的CodeMprpheus，欢迎大家点击试玩！ [在线试玩](https://morpheus.opendilab.org.cn) and [知乎文章](https://zhuanlan.zhihu.com/p/676509763)
+- 2024.01.08: 我们发布了 GitHub 年终盘点版本的CodeMprpheus，欢迎大家点击试玩！ [在线试玩](https://morpheus.opendilab.org.cn) & [知乎文章](https://zhuanlan.zhihu.com/p/676509763)
 
 ## :star_struck: 快速上手指南
 
