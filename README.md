@@ -9,6 +9,9 @@ English | [简体中文](https://github.com/opendilab/CodeMorpheus/blob/release/
 
 P.S. remember to give us a star ![stars - codemorpheus](https://img.shields.io/github/stars/opendilab/codemorpheus?style=social)
 
+## News
+- 2024.01.08: We released the GitHub year-end summary version of CodeMorpheus, come and try! [Online trial](https://morpheus.opendilab.org.cn) and [Release note](https://zhuanlan.zhihu.com/p/676509763)
+
 ## :star_struck: Quick Start
 
 ### Input Code Lines
@@ -47,11 +50,9 @@ You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload 
 ├── code2pil.py                  --> code for image generation
 ├── examples.py                  --> code examples
 └── language_model.py            --> code for language model
+└── morpheus                     --> code for GitHub year-end summary
 
 ```
-
-## News
-- 2024.01.08: We released the GitHub year-end wraparound version of CodeMorpheus, come and try! [Online trial](https://morpheus.opendilab.org.cn) and [Release note](https://zhuanlan.zhihu.com/p/676509763)
 
 ## :speech_balloon: Feedback and Contribution
 - [File an issue](https://github.com/opendilab/CodeMorpheus/issues/new/choose) on Github
