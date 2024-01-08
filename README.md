@@ -36,7 +36,7 @@ You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload 
 - [ ] Support more programming languages
 
 
-# Project Structure
+## Project Structure
 ```text
 .
 ├── LICENSE
@@ -49,6 +49,9 @@ You can [access it online](http://codemorpheus.opendilab.net/), click ‘Upload 
 └── language_model.py            --> code for language model
 
 ```
+
+## News
+- 2024.01.08: We released the GitHub year-end wraparound version of CodeMorpheus, come and try! [Online trial](morpheus.opendilab.org.cn) [Release note](https://zhuanlan.zhihu.com/p/676509763)
 
 ## :speech_balloon: Feedback and Contribution
 - [File an issue](https://github.com/opendilab/CodeMorpheus/issues/new/choose) on Github
